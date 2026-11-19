@@ -1,0 +1,6 @@
+{
+  "name": "COUNTERS — League of Legends",
+  "description": "Know your enemy. Win your lane. Plataforma interativa de counters de League of Legends com busca instantânea, favoritos, histórico e gamificação.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

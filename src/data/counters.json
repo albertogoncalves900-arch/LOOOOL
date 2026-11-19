@@ -1,0 +1,17 @@
+{
+  "TOP": [
+    {
+      "champion": "AATROX",
+      "counters": ["FIORA", "IRELIA", "KLED"]
+    }
+  ],
+  "JUNGLE": [
+    {
+      "champion": "AATROX",
+      "counters": ["GRAVES", "KINDRED", "ELISE"]
+    }
+  ],
+  "MID": [],
+  "ADC": [],
+  "SUPORTE": []
+}
