@@ -19,12 +19,19 @@
     background-color: #080B14;
     color: #F8FAFC;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: contain;
   }
 
   body {
     background-color: #080B14;
     color: #F8FAFC;
     overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  button, a, [role="button"] {
+    touch-action: manipulation;
   }
 
   h1, h2, h3, h4, .font-display {
@@ -39,6 +46,10 @@
   .tabular-nums {
     font-variant-numeric: tabular-nums;
   }
+}
+
+.safe-top-bar {
+  padding-top: env(safe-area-inset-top);
 }
 
 /* Custom sleek dark scrollbar */

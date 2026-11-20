@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { getChampionLanes, getRankedCountersForChampion } from '../data/lolMatchups';
 import { DDragonChampionSummary, LaneTag } from '../utils/ddragon';
 import { ChampionImage } from './ChampionImage';
+import { CounterItemsBar } from './CounterItemsBar';
 import { SkillCooldownsBar } from './SkillCooldownsBar';
 
 interface CounterResultsViewProps {
@@ -155,8 +156,9 @@ export const CounterResultsView: React.FC<CounterResultsViewProps> = ({
           </div>
         </div>
 
-        <div className="p-5 sm:p-6 border-t border-[#273449]">
+        <div className="p-5 sm:p-6 border-t border-[#273449] space-y-5">
           <SkillCooldownsBar championId={enemyChampion.id} version={version} />
+          <CounterItemsBar enemyChampion={enemyChampion} version={version} />
         </div>
       </section>
 

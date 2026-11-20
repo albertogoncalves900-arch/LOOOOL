@@ -11,6 +11,8 @@ import {
 import { getChampionLanes } from './data/lolMatchups';
 import { ChampionImage } from './components/ChampionImage';
 import { CounterResultsView } from './components/CounterResultsView';
+import { OfflineIndicator } from './components/OfflineIndicator';
+import { PWAInstallButton } from './components/PWAInstallButton';
 
 const LANE_FILTERS: Array<{ id: LaneTag | 'ALL'; label: string }> = [
   { id: 'ALL', label: 'Todos' },
@@ -129,8 +131,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#080B14] text-[#F8FAFC]">
       {/* Minimal Clean Top Bar */}
-      <header className="sticky top-0 z-30 h-16 bg-[#080B14]/90 backdrop-blur-md border-b border-[#273449]">
-        <div className="max-w-6xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
+      <header className="sticky top-0 z-30 safe-top-bar min-h-16 bg-[#080B14]/90 backdrop-blur-md border-b border-[#273449]">
+        <div className="max-w-6xl mx-auto h-16 px-4 sm:px-6 flex items-center justify-between gap-4">
           <button
             type="button"
             onClick={() => {
@@ -179,6 +181,7 @@ export default function App() {
             <span className="font-mono-tabular text-xs text-[#94A3B8]">
               Patch {version}
             </span>
+            <PWAInstallButton />
           </div>
         </div>
       </header>
@@ -377,6 +380,7 @@ export default function App() {
           </section>
         )}
       </main>
+      <OfflineIndicator />
     </div>
   );
 }

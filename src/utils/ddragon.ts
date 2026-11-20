@@ -128,6 +128,13 @@ export function getPassiveIconUrl(
   return `${DDRAGON_BASE}/cdn/${version}/img/passive/${imageFull}`;
 }
 
+export function getItemIconUrl(
+  itemId: string,
+  version: string = DEFAULT_DDRAGON_VERSION
+): string {
+  return `${DDRAGON_BASE}/cdn/${version}/img/item/${itemId}.png`;
+}
+
 export function stripDDragonHtml(raw: string): string {
   return raw
     .replace(/<br\s*\/?>/gi, ' ')
